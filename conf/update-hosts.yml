@@ -1,0 +1,12 @@
+---
+- name: update /etc/hosts
+  hosts: all
+  become: true
+  tasks:
+  - name: update hosts file
+    local_action:
+      module: lineinfile
+      dest: /etc/hosts
+      regexp: '.*{{ ansible_hostname }}$'
+      line: "{{ ansible_default_ipv4.address }} \t {{ ansible_hostname }}"
+      state: present

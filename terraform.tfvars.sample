@@ -1,0 +1,5 @@
+access_key = "MYACCESSKEYID"
+secret_key = "MYSECRETACCESSKEY"
+master_type = "NombrDeSaborMaster"
+node_type = "NombrDeSaborMaster"
+cantnode = 2
